@@ -1,6 +1,17 @@
 body{
-    background-image: url(image/pexels-deva-darshan-1173770.jpg);
-    background-size: 100%, 100%;
+    background-image: url(image/pexels-justus-menke-5213156.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
+h1{
+    text-align: center;
+    color: rgb(205, 175, 66);
+    padding-top: 3cm;
+    padding-bottom: 3cm;
+}
 
+h2{
+    color: brown;
+    font-size: 17px;
+}
