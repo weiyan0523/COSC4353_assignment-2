@@ -1,0 +1,25 @@
+.profile{
+    text-align: center;
+    color: rgb(193, 114, 17);
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.logout{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: beige;
+    text-align: center;
+    border-radius: 30px;
+    margin-left: 800px;
+    margin-top: 10px;
+}
+.sidebar{
+    text-align: left;
+}

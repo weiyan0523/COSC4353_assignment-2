@@ -4,30 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Main page</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="sidebar">
-        <button type="button" class="logout" onclick="logoutMessage()">Logout</button> 
-        <header>Navigate</header>
-        <ul>
-            <li>Fuel Quote Form</li>
-            <li>Fuel Quote History</li>
-        </ul>
-        
-    </div>
     <h1>Profile</h1>
-    <div class="profile">
     <form>
         <label for="fname">Full Name:</label>
-        <input type="text" maxlength="50" id="fname" name="fname" placeholder="Name" required><br><br>
+        <input type="text" maxlength="50" id="fname" name="fname" required><br><br>
         <label for="add1">Address 1:</label>
-        <input type="text" maxlength="100" id="add1" name="add1" placeholder="Address 1"required><br><br>
+        <input type="text" maxlength="100" id="add1" name="add1" required><br><br>
         <label for="add1">Address 2:</label>
-        <input type="text" maxlength="100" id="add2" name="add2" placeholder="Address 2"><br><br>
+        <input type="text" maxlength="100" id="add2" name="add2"><br><br>
         <label for="city">City:</label>
-        <input type="text" maxlength="100" id="city" name="city" placeholder="City" required><br><br>
+        <input type="text" maxlength="100" id="city" name="city" required><br><br>
         
         <label for="state">State:</label>
         <select name="state" size="1">
@@ -85,15 +74,10 @@
           </select required><br><br>
 
         <label for="zip">Zipcode:</label>
-        <input type="text" maxlength="9" minlength="5" id="zip" name="zip" placeholder="Zipcode" required><br><br>
+        <input type="text" maxlength="9" minlength="5" id="zip" name="zip" required><br><br>
         <button style="margin-top: 5px">Update</button>
       </form>
-    </div>
-    <script>
-        function logoutMessage(){
-            alert("you have been logged out")
-            window.close()
-        }
-    </script>
+    <a href="fuelQuoteForm.html"> <h2>Fuel Quote Form</h2> </a> 
+    <a href="fuelQuoteHistory.html"> <h3>Fuel Quote History</h3> </a>
 </body>
 </html>
