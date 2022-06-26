@@ -12,10 +12,23 @@
     <a href="newUser.html"> <h2> Create a new account </h2> </a>
     <form>
         Username:
-        <input type = "text" name = "username"><br>
+        <input type = "text" name = "username" id = "username"><br>
         Password :
-        <input type = "password" name = "pwd"><br>
-        <input type="submit" value="Login">
+        <input type = "password" name = "pwd" id = "pwd"><br>
+        <input type="submit" onclick = "checkUser()" value="Login">
     </form>
+    <script>
+        function checkUser(){
+            var pwd = document.getElementById('pwd').value;
+            var username = document.getElementById('username').value;
+            if(username=='admin'&& pwd==1234){
+                window.open('afterlogin.html');
+            }
+            else{
+                alert("incorrect username and password")
+            }
+            
+        }
+    </script>
 </body>
 </html>
