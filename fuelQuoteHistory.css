@@ -38,6 +38,10 @@ body{
 }
 h1{
     text-align: center;
+    color: white;
+}
+fieldset{
+    color:white;
 }
 form{
     text-align: center;
