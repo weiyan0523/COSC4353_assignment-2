@@ -1,3 +1,8 @@
+body{
+    background-image: url(image/pexels-lilartsy-1563510.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 .logout{
     width: 100px;
     height: 30px;

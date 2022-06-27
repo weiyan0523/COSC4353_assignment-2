@@ -1,3 +1,8 @@
+body{
+    background-image: url(image/pexels-lilartsy-1563510.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 .sidebar{
     left: 0;
     width: 240px;
@@ -32,9 +37,16 @@
     float:right;
 }
 h1{
+    box-sizing: content-box;
+    background-color: beige;
+    height: 40px;
+    border: none;
+   
+    border-radius: 30px;
     text-align: center;
 }
 form{
+    background-color: beige;
     text-align: center;
     color: rgb(193, 114, 17);
 }
