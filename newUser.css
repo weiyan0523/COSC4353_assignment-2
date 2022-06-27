@@ -1,6 +1,13 @@
+body{
+    background-image: url(image/pexels-lilartsy-1563510.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 h1{
     text-align: center;
+    color: beige;
 }
 form{
     text-align: center;
+    color: bisque;
 }
