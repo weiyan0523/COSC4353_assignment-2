@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const checkUser  = require('./loginPage')
 
 test('function with no error',()=>{
@@ -7,3 +8,24 @@ test('function with no error',()=>{
 test('function with no error',()=>{
     expect(checkUser('12','')).toBeTruthy()
 })
+
+function checkUser(username, password){
+    const passed = new Boolean(false);
+    if (username == '' || password == ''){
+        console.log("Fill out all fields!")
+    }
+    else if (username.length <= 5 || password.length <=5){
+        console.log("Username or Password must be greater than 5 characters!")
+    }
+    else{
+        location.href =("afterlogin.html")
+        passed = true
+    }
+    console.log(passed)
+    return passed;
+}
+
+
+
+module.exports = checkUser
+

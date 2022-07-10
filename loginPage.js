@@ -14,8 +14,4 @@ function checkUser(username, password){
     return passed;
 }
 
-
-// const functions = {
-//     check:(username == '',passoword == '') => alert("Fill out all fields!")
-// };
 module.exports = checkUser
