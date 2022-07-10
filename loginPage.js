@@ -1,12 +1,10 @@
 function checkUser(username, password){
-
     const passed = new Boolean(false);
-
     if (username == '' || password == ''){
-        alert("Fill out all fields!")
+        console.log("Fill out all fields!")
     }
-    else if (username.length <= 5 || password.length){
-        alert("Username or Password must be greater than 5 characters!")
+    else if (username.length <= 5 || password.length <=5){
+        console.log("Username or Password must be greater than 5 characters!")
     }
     else{
         location.href =("afterlogin.html")
@@ -14,4 +12,5 @@ function checkUser(username, password){
     }
     return passed;
 }
+
 module.exports = checkUser

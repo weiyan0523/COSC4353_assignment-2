@@ -1,5 +1,10 @@
-const checkUser  = require('./checkUser')
+const checkUser  = require('./loginPage')
 
-test('testing', ()=>{
-    expect(checkUser(1,2).toBe(''))
+test('function with no error',()=>{
+    expect(checkUser('','')).toBeDefined()
 })
+
+test('function with no error',()=>{
+    expect(checkUser('12','')).toBeTruthy()
+})
+
