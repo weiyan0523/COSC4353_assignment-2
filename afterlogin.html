@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="afterlogin.js"></script>
     <title>Main page</title>
 </head>
 <body>
@@ -21,17 +22,18 @@
     <h1>Profile</h1>
     <div class="profile">
     <form>
-        <label for="fname">Full Name:</label>
-        <input type="text" maxlength="50" id="fname" name="fname" placeholder="Name" required><br><br>
-        <label for="add1">Address 1:</label>
-        <input type="text" maxlength="100" id="add1" name="add1" placeholder="Address 1"required><br><br>
-        <label for="add1">Address 2:</label>
-        <input type="text" maxlength="100" id="add2" name="add2" placeholder="Address 2"><br><br>
+        <label for="fname">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br>
+        <label for="fname">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br><br>
+        <label for="add1">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Address"><br><br>
         <label for="city">City:</label>
-        <input type="text" maxlength="100" id="city" name="city" placeholder="City" required><br><br>
+        <input type="text" id="city" name="city" placeholder="City"><br><br>
         
         <label for="state">State:</label>
-        <select name="state" size="1">
+        <select id = "state" name="state" size="1">
+            <option value="">Select...</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -83,18 +85,14 @@
             <option value="WV">West Virginia</option>
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
-          </select required><br><br>
+          </select><br><br>
+
 
         <label for="zip">Zip code:</label>
-        <input type="text" maxlength="9" minlength="5" id="zip" name="zip" placeholder="Zipcode" required><br><br>
-        <button style="margin-top: 5px">Update</button>
+        <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code"><br><br>
+
+        <button style="margin-top: 5px" onclick="updateInfo(firstName.value, lastName.value, address.value, city.value, state.value, zipcode.value)">Update</button>
       </form>
     </div>
-    <script>
-        function logoutMessage(){
-            alert("you have been logged out")
-            window.close()
-        }
-    </script>
 </body>
 </html>

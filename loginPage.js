@@ -12,7 +12,6 @@ function checkUser(username, password){
         location.href =("afterlogin.html")
         passed = true
     }
-    console.log(passed)
     return passed;
 }
 
