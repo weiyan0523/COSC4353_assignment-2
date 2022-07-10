@@ -1,6 +1,6 @@
 function checkAmount(gRequested, dDate){
     const passed = new Boolean(false);
-    
+
     if (gRequested == ''|| dDate ==''){
         console.log("Fill out all fields!")
     }
@@ -10,6 +10,7 @@ function checkAmount(gRequested, dDate){
     else{
         console.log(gRequested)
         console.log(dDate)
+        passed = true
     }
     console.log(passed)
     return passed;
