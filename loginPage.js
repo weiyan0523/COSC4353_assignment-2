@@ -14,5 +14,4 @@ function checkUser(username, password){
     }
     return passed;
 }
-
 module.exports = checkUser
