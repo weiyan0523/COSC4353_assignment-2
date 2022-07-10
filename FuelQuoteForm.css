@@ -48,5 +48,6 @@ h1{
 form{
     background-color: beige;
     text-align: center;
+    border-radius: 30px;
     color: rgb(193, 114, 17);
 }
