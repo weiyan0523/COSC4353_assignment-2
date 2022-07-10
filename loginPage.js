@@ -15,5 +15,4 @@ function checkUser(username, password){
     console.log(passed)
     return passed;
 }
-
 module.exports = checkUser

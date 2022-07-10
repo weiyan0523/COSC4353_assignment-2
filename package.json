@@ -1,0 +1,23 @@
+{
+  "name": "cosc4353_assignment-1",
+  "version": "1.0.0",
+  "description": "Backend Python Django Framework Database - sql",
+  "main": "loginPage.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxweiyan/COSC4353_assignment-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zxweiyan/COSC4353_assignment-1/issues"
+  },
+  "homepage": "https://github.com/zxweiyan/COSC4353_assignment-1#readme",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
+}
