@@ -1,4 +1,4 @@
-# COSC4353 assignment 2
+# COSC4353 assignment 3
 
 Backend
 Python Django Framework
