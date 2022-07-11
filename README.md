@@ -17,6 +17,7 @@ https://stackify.com/code-coverage-tools/
 * should have validations in place for required fields
 
 
+
 use npm test to run the Unit test, a coverage report will be generated under coverage/lcov-report/index.html
 
 To run unit test (MACOS)
