@@ -7,3 +7,6 @@ test('function with no error',()=>{
 test('testing',()=>{
     expect(checkUser('','')).toBeTruthy()
 })
+test('function with no error',()=>{
+    expect(checkUser('wdauidhi','2138412')).toBe(0)
+})

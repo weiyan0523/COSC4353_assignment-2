@@ -8,5 +8,5 @@ test('function with no error',()=>{
     expect(checkUser('hi','lol')).toBe(2)
 })
 test('function with no error',()=>{
-    expect(checkUser('admin2','654321')).toBe(0)
+    expect(checkUser('admin2','654321')).toBeTruthy()
 })
