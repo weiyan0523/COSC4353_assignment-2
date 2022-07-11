@@ -5,6 +5,9 @@ test('function with no error',()=>{
 })
 
 test('function with no error',()=>{
-    expect(checkUser('12','')).toBeTruthy()
+    expect(checkUser('12','d')).toBe(2)
+})
+test('function with no error',()=>{
+    expect(checkUser('admin1','123456')).toBe(0)
 })
 
