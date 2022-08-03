@@ -1,8 +1,21 @@
-# COSC4353 assignment 3
+# COSC4353 assignment 4
+
+
+Assignment 4
+
+Datebase phpadmin, mysql
+
+
+
+
+
+
+
+
+
 
 Backend
 Python Django Framework
-Database - sql
 
 
 Assignment 3
