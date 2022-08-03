@@ -13,10 +13,10 @@ CREATE TABLE ClientInformation(
     UserID INT NOT NULL,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
-    StreetAddress VARCHAR(255) NOT NULL,
-    City VARCHAR(255) NOT NULL,
-    State VARCHAR(50) NOT NULL,
-    Zipcode VARCHAR(50) NOT NULL,
+    StreetAddress VARCHAR(100) NOT NULL,
+    City VARCHAR(100) NOT NULL,
+    State VARCHAR(2) NOT NULL,
+    Zipcode VARCHAR(10) NOT NULL,
     PRIMARY KEY (UserID)  
 );
 
