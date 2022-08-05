@@ -1,5 +1,3 @@
-
-
 function checkNewUser(username, password){
     let passed = 0;
     if (username == '' || password == ''){
@@ -11,9 +9,14 @@ function checkNewUser(username, password){
         passed = 2
     }
     else{
-        //create user and add to database
+        var encrypted = CryptoJS.AES.encrypt(password, "12345"); //12345 = passphrase
+        var decrypted = CryptoJS.AES.decrypt(encrypted, "12345");
+
+        console.log("og password = " + password);
+        console.log("encrypted = " + encrypted);
+        console.log("decrypted and toString = " + decrypted.toString(CryptoJS.enc.Utf8));
     }
     return passed;
 }
 
-module.exports = checkNewUser
+//module.exports = checkNewUser
