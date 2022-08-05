@@ -4,11 +4,7 @@ function checkUser(username, password){
         console.log("Fill out all fields!")
         passed = 1
     }
-    else if (username.length <= 5 || password.length <=5){
-        console.log("Username or Password must be greater than 5 characters!")
-        passed = 2
-    }
-    else{
+    else{ // no other validation due to not wanting to leak client details :)
         location.href =("afterlogin.html")
     }
     return passed;

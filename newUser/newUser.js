@@ -8,6 +8,10 @@ function checkNewUser(username, password){
         console.log("Username or Password must be greater than 5 characters!")
         passed = 2
     }
+    else if(username.length > 50){
+        console.log("Username must be less than 50 characters!")
+        passed = 2
+    }
     else{
         var encrypted = CryptoJS.AES.encrypt(password, "12345"); //12345 = passphrase
         var decrypted = CryptoJS.AES.decrypt(encrypted, "12345");

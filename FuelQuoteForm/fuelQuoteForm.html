@@ -24,7 +24,6 @@
         <!--need to complete -->
         <label for="gRequested">Gallons Requested:</label>
         <input type="number" min="0" id="gRequested" name="gRequested" required><br><br>
-        <label for="dAddress">Delivery Address: 4800 Calhoun Rd, Houston, TX 77004</label><br><br>
         <label for="dDate">Delivery Date:</label>
         <input type="date" id="dDate" name="dDate"><br><br>
         <input type="button" onclick = "checkAmount(gRequested.value, dDate.value)" value="update"><br>
@@ -32,12 +31,6 @@
         <label for="totalDue">Total Amount Due: $</label><br><br>
 
     </form>
-    <script>
-        function logoutMessage(){
-            alert("you have been logged out")
-            window.location.href = "loginPage.html";
-        }
-    </script>
 
 </body>
 </html>
