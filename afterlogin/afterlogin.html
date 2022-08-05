@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <script type="text/javascript" src="/afterlogin/afterlogin.js"></script>
+    <link rel="stylesheet" href="http://20.55.70.6:8080/website/style.css">
+   <!-- <script type="text/javascript" src="http://20.55.70.6:8080/website/afterlogin/afterlogin.js"></script>-->
     <title>Main page</title>
 </head>
 <body>
@@ -14,14 +14,14 @@
         
         <header>Navigate</header>
         <ul>
-            <a href="/FuelQuoteForm/fuelQuoteForm.html"><li>Fuel Quote Form</li></a>
-            <a href="/fuelQuoteHistory/fuelQuoteHistory.html"><li>Fuel Quote History</li></a>
+            <a href="http://20.55.70.6:8080/website/FuelQuoteForm/fuelQuoteForm.html"><li>Fuel Quote Form</li></a>
+            <a href="http://20.55.70.6:8080/website/fuelQuoteHistory/fuelQuoteHistory.html"><li>Fuel Quote History</li></a>
         </ul>
         
     </div>
     <h1>Profile</h1>
     <h2><div class="profile">
-    <form>
+    <form method="post" action = "http://20.55.70.6:8080/website/afterlogin/connect-afterlogin.php">
         <label for="fname">First Name:</label>
         <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br>
         <label for="fname">Last Name:</label>
@@ -91,7 +91,8 @@
         <label for="zip">Zip code:</label>
         <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code"><br><br>
 
-        <button style="margin-top: 5px" onclick="updateInfo(firstName.value, lastName.value, address.value, city.value, state.value, zipcode.value)">Update</button>
+        <!--<button style="margin-top: 5px" onclick="updateInfo(firstName.value, lastName.value, address.value, city.value, state.value, zipcode.value)">Update</button>-->
+        <input type="submit" name="save" value="Update" style="font-size:20px">
       </form>
     </div>
 </body>
