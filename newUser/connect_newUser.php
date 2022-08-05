@@ -5,7 +5,7 @@ $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
 
 //connect to db
-$host = "20.55.70.6:8080";
+$host = "localhost";
 $dbname = "web_app";
 $username = "root";
 $password = "admin12345";
