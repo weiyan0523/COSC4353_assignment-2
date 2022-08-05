@@ -22,7 +22,8 @@ if(isset($_POST['save']))
 
 	 if (mysqli_query($conn, $sql_query)) 
 	 {
-		echo "New Details Entry inserted successfully !";
+		header("location: http://20.55.70.6:8080/website/loginPage/loginPage.html");
+
 	 } 
 	 else
      {
