@@ -1,7 +1,7 @@
 CREATE DATABASE NWC;
 
 CREATE TABLE FuelQuote(
-    UserID INT NOT NULL,
+    UserID VARCHAR(5) NOT NULL,
     GallonsRequested INT NOT NULL,
     DATE VARCHAR(50) NOT NULL,
     SuggestedPrice INT,
@@ -10,7 +10,7 @@ CREATE TABLE FuelQuote(
 );
 
 CREATE TABLE ClientInformation(
-    UserID INT NOT NULL,
+    UserID VARCHAR(5) NOT NULL,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     StreetAddress VARCHAR(100) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE ClientInformation(
 );
 
 CREATE TABLE UserCredentials(
-    UserID INT NOT NULL,
+    UserID VARCHAR(5) NOT NULL,
     Username VARCHAR(50) NOT NULL,
     PasswordEncrypted VARCHAR(255) NOT NULL,
     PRIMARY KEY (UserID)
