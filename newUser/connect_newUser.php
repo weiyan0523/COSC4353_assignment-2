@@ -1,29 +1,29 @@
 <?php
 
-ini_set("display_errors", "1");
-error_reporting(E_ALL);
-
 //print_r($_POST);
-$Username = $_POST['username'];
-$Password = $_POST['password'];
+$username = filter_input(INPUT_POST, 'username');
+$password = filter_input(INPUT_POST, 'password');
 
 //connect to db
-$host = "20.55.70.6/phpmyadmin";
-$dbname = "newUser_db";
+$host = "20.55.70.6:8080";
+$dbname = "web_app";
 $username = "root";
 $password = "admin12345";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection error: " . $conn->connect_error);
+if (mysqli_connect_error()) {
+    die('Connection error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
 }
 else{
-    $stmt = $conn->prepare("insert into registration(username, passowrd(?, ?)");
-    $stmt->bind_param("ss",$Username, $Password);
-    $stmt->execute();
-    echo "registration successfully";
-    $stmt ->close();
+    $sql = "INSERT INTO registration(username, password)
+    values ('$username', '$password')";
+    if($conn->query($sql)){
+        echo "New record is inserted sucessfully";
+    }
+    else{
+        echo "Error: ". $sql ."<br>". $conn->error;
+    }
     $conn->close();
 }
 

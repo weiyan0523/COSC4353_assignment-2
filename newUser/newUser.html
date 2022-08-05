@@ -8,19 +8,14 @@
    <!--<script type="text/javascript" src="/newUser/newUser.js"></script>-->
     <title>New User</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-
 </head>
 <body>
     <h1>Create your Account</h1>
-    <form action="connect_newUser.php" method="post">
+    <form action="/newUser/connect_newUser.php" method="post">
         <label for ="username">Username</label>
         <input type = "text" name ="username" id = "username">
         <label for = "password">Password</label>
         <input type = "password" name = "password" id = "password">
-        <label>
-            <input type ="checkbox" name = "term">
-            I agree to the terms and all the conditions
-        </label>
         <br>
         <!--<input type="submit" onclick = "checkNewUser(username.value, password.value)" value="create">-->
         <button>Submit</button>
