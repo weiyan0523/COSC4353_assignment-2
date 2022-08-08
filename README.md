@@ -6,6 +6,8 @@ You can access phpmyadmin by using this link http://20.55.70.6:8080/phpmyadmin/ 
 
 
 phpmyadmin username: root
+
+
 phpmyadmin password: admin12345
 
 
