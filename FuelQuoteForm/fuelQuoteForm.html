@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://20.55.70.6:8080/website/FuelQuoteForm/FuelQuoteForm.css">
     <title>Fuel Quote Form</title>
-    <script type="text/javascript" src="http://20.55.70.6:8080/website/FuelQuoteForm/fuelQuoteForm.js"></script>
+    <!--<script type="text/javascript" src="http://20.55.70.6:8080/website/FuelQuoteForm/fuelQuoteForm.js"></script>-->
 </head>
 <body>
     <button type="button" class="logout" onclick="logoutMessage()">Logout</button> 
@@ -24,20 +24,48 @@
         <!--need to complete -->
         <label for="gRequested">Gallons Requested:</label>
         <input type="number" min="0" id="gRequested" name="gRequested" required><br><br>
-        <label for="dAddress">Delivery Address: 4800 Calhoun Rd, Houston, TX 77004</label><br><br>
+        <label for="dAddress" id="dAddress" >Delivery Address: 4800 Calhoun Rd, Houston, TX 77004</label><br><br>
         <label for="dDate">Delivery Date:</label>
         <input type="date" id="dDate" name="dDate"><br><br>
         <!--<input type="button" onclick = "checkAmount(gRequested.value, dDate.value)" value="update"><br>-->
-        <input type="submit" name="save" value="Update" style="font-size:20px">
+        <!--<input type="submit" name="save" value="Update" style="font-size:20px">-->
+        <button type="button" id="get-quote" class="btn btn-dark" onclick="calculatePrice()">Get Quote</button>
         <br>
-        <label for="suggestedPrice">Suggested Price Per Gallon:</label><br><br>
-        <label for="totalDue">Total Amount Due: $</label><br><br>
+        <label for="suggestedPrice" id="sPrice">Suggested Price Per Gallon:<span id="sPrice"></span></label><br><br>
+        <label for="totalDue" id="total">Total Amount Due:$<span id="total"></span></label><br><br>
 
     </form>
     <script>
         function logoutMessage(){
             window.location.href = "http://20.55.70.6:8080/website/login/";
         }
+
+        function calculatePrice() {
+        if (gRequested.val < 0) {
+          gRequested.val(0)
+          return;
+        }
+        let current_price = 1.50;
+        let location_factor = 0.04;
+        if (dAddress.val === "TX") {
+          location_factor = 0.02;
+        }
+        let history_factor = 0;
+        if (history_factor > 0) {
+          history_factor = 0.01;
+        }
+        let gallons_factor = 0.03;
+        if (gRequested.val > 1000) {
+          gallons_factor = 0.02;
+        }
+        let profit_factor = 0.1;
+
+        let margin = current_price * (location_factor - history_factor + gallons_factor + profit_factor);
+        let sPrice = current_price + margin;
+        let total = sPrice * gRequested.val;
+        
+        
+      }
     </script>
 
 </body>
