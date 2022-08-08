@@ -29,7 +29,7 @@
         <input type="date" id="dDate" name="dDate"><br><br>
         <!--<input type="button" onclick = "checkAmount(gRequested.value, dDate.value)" value="update"><br>-->
         <!--<input type="submit" name="save" value="Update" style="font-size:20px">-->
-        <button type="button" id="get-quote" class="btn btn-dark" onclick="calculatePrice()">Get Quote</button>
+        <button type="button" id="get-quote" class="btn btn-dark" onclick="calculatePrice(gRequested)">Get Quote</button>
         <br>
         <label for="suggestedPrice" id="sPrice">Suggested Price Per Gallon:<span for="suggestedPrice" id="sPrice"></span></label><br><br>
         <label for="totalDue" id="total">Total Amount Due:$<span id="total"></span></label><br><br>
@@ -40,11 +40,9 @@
             window.location.href = "http://20.55.70.6:8080/website/login/";
         }
 
-        function calculatePrice(gRequested ,dAddress,) {
-        if (gRequested < 0) {
-          gRequested.val(0)
-          return;
-        }
+        function calculatePrice(gRequested) {
+        var gRequested = document.getElementById('gRequested').ATTRIBUTE_NODE
+
         let current_price = 1.50;
         let location_factor = 0.04;
         if (dAddress === "TX") {
