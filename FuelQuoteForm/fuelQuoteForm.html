@@ -31,7 +31,7 @@
         <!--<input type="submit" name="save" value="Update" style="font-size:20px">-->
         <button type="button" id="get-quote" class="btn btn-dark" onclick="calculatePrice()">Get Quote</button>
         <br>
-        <label for="suggestedPrice" id="sPrice">Suggested Price Per Gallon:<span id="sPrice"></span></label><br><br>
+        <label for="suggestedPrice" id="sPrice">Suggested Price Per Gallon:<span for="suggestedPrice" id="sPrice"></span></label><br><br>
         <label for="totalDue" id="total">Total Amount Due:$<span id="total"></span></label><br><br>
 
     </form>
@@ -40,14 +40,14 @@
             window.location.href = "http://20.55.70.6:8080/website/login/";
         }
 
-        function calculatePrice() {
-        if (gRequested.val < 0) {
+        function calculatePrice(gRequested ,dAddress,) {
+        if (gRequested < 0) {
           gRequested.val(0)
           return;
         }
         let current_price = 1.50;
         let location_factor = 0.04;
-        if (dAddress.val === "TX") {
+        if (dAddress === "TX") {
           location_factor = 0.02;
         }
         let history_factor = 0;
@@ -55,16 +55,16 @@
           history_factor = 0.01;
         }
         let gallons_factor = 0.03;
-        if (gRequested.val > 1000) {
+        if (gRequested > 1000) {
           gallons_factor = 0.02;
         }
         let profit_factor = 0.1;
 
         let margin = current_price * (location_factor - history_factor + gallons_factor + profit_factor);
         let sPrice = current_price + margin;
-        let total = sPrice * gRequested.val;
-        
-        
+        let total = sPrice * gRequested
+        document.getElementById('sPrice').innerHTML = sPrice
+        document.getElementById('total').innerHTML = total
       }
     </script>
 
