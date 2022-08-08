@@ -1,18 +1,16 @@
 # COSC4353 assignment 4
 
 
+We use phpmyadmin to store client information
+You can access phpmyadmin by using this link http://20.55.70.6:8080/phpmyadmin/ all the data are store under login_db
+phpmyadmin username: root
+phpmyadmin password: admin12345
+
+
+
 Assignment 4
 
 Datebase phpadmin, mysql
-
-
-
-
-
-
-
-
-
 
 Backend
 Python Django Framework
