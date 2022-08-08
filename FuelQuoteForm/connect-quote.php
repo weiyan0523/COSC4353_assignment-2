@@ -22,7 +22,7 @@ if(isset($_POST['save']))
 
 	 if (mysqli_query($conn, $sql_query)) 
 	 {
-		header("location: http://20.55.70.6:8080/website/FuelQuoteForm/connect-quote.php");
+		header("location: http://20.55.70.6:8080/website/FuelQuoteForm/fuelQuoteForm.html");
 
 	 } 
 	 else
