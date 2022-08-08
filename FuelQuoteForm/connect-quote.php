@@ -2,7 +2,7 @@
 $server_name="localhost";
 $username="root";
 $password="admin12345";
-$database_name="reg";
+$database_name="login_db";
 
 $conn=mysqli_connect($server_name,$username,$password,$database_name);
 //now check the connection
@@ -22,7 +22,7 @@ if(isset($_POST['save']))
 
 	 if (mysqli_query($conn, $sql_query)) 
 	 {
-		header("location: http://20.55.70.6:8080/website/afterlogin/afterlogin.html");
+		header("location: http://20.55.70.6:8080/website/FuelQuoteForm/connect-quote.php");
 
 	 } 
 	 else
